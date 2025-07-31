@@ -44,6 +44,7 @@ nav a:hover {
   align-items: center;
   padding: 4rem;
   gap: 4rem;
+  height: 85vh; /* Pantalla completa */
 }
 
 .hero-text {
@@ -194,4 +195,132 @@ nav a:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.borcelle-section {
+  background: linear-gradient(to right, #2b1b0e 50%, #5c3a21 50%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.borcelle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 3rem;
+}
+
+.borcelle-text {
+  flex: 1;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.borcelle-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: normal;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.borcelle-logo::first-letter {
+  font-size: 4.5rem;
+  font-weight: bold;
+  float: left;
+  margin-right: 0.3rem;
+  line-height: 1;
+}
+
+.borcelle-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #fff;
+  max-width: 90%;
+}
+
+.borcelle-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.borcelle-image img {
+  max-width: 400px;
+  width: 100%;
+  border: 8px solid white;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+.borcelle-subtext {
+  font-size: 0.9rem;
+  color: #e0cbb0;
+  margin-top: 0.5rem;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+/* --- Animación de entrada general para la sección --- */
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.borcelle-section {
+  animation: fadeInSection 1.2s ease-out both;
+}
+
+/* --- Animaciones individuales que ya aplicaste (logo, texto y subtexto) --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.borcelle-logo {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+.borcelle-text p {
+  animation: fadeInUp 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+.borcelle-subtext {
+  animation: fadeInUp 2s ease-out forwards;
+  opacity: 0;
+}
+
+/* (Opcional) Animación para la imagen */
+.borcelle-image img {
+  animation: fadeInUp 2.2s ease-out forwards;
+  opacity: 0;
+}
+
+
+
+
+html {
+  scroll-behavior: smooth;
 }
